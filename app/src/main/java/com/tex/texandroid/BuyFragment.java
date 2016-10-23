@@ -14,6 +14,7 @@ import android.view.ViewGroup;
  */
 public class BuyFragment extends Fragment{
     private RecyclerView recyclerView;
+    private bookListAdapter bookAdapter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +25,8 @@ public class BuyFragment extends Fragment{
         recyclerView=(RecyclerView)view.findViewById(R.id.recyclerId);
         final LinearLayoutManager linearLayoutManager= new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
-        bookListAdapter= new bookListAdapter(getActivity());
-        recyclerView.setAdapter(bookListAdapter);
+        bookAdapter= new bookListAdapter(getActivity());
+        recyclerView.setAdapter(bookAdapter);
         return view;
     }
 }
